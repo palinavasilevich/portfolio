@@ -13,7 +13,7 @@ export default function Background({
   const stars: Star[] = useMemo(() => generateStars(starCount), [starCount]);
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
       <div className="absolute inset-0 bg-slate-50 dark:bg-gray-900 pointer-events-none">
         {stars.map((star) => (
           <div
@@ -30,9 +30,7 @@ export default function Background({
         ))}
       </div>
 
-      <div className="relative z-10 flex min-h-screen items-center justify-center">
-        {children}
-      </div>
+      <div className="relative z-10 flex flex-col">{children}</div>
     </div>
   );
 }

@@ -1,9 +1,13 @@
 import Background from "@/components/layout/background/Background";
+import { Contact, Hero, Projects, Skills } from "@/components/sections";
 
 export default function Home() {
   return (
     <Background>
-      <section>Home Page</section>
+      <Hero />
+      <Skills />
+      <Projects />
+      <Contact />
     </Background>
   );
 }
