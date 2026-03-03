@@ -3,8 +3,8 @@ import { Code } from "lucide-react";
 
 export function Header() {
   return (
-    <header>
-      <nav className="bg-white dark:bg-gray-900 shadow-md dark:shadow-sm dark:shadow-slate-800 top-0 z-40">
+    <header className="bg-white dark:bg-gray-900 shadow-md  dark:shadow-sm dark:shadow-slate-800 top-0 z-40">
+      <nav>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 relative">
             <Link

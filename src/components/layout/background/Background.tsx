@@ -30,7 +30,7 @@ export default function Background({
         ))}
       </div>
 
-      <div className="relative z-10 flex flex-col">{children}</div>
+      <div className="relative z-10">{children}</div>
     </div>
   );
 }

@@ -1,39 +1,54 @@
-import clsx from "clsx";
+"use client";
+
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
-type ThemeVariant = "primary" | "secondary";
+import clsx from "clsx";
 
+type AnimationVariant = "fadeUp" | "fadeLeft" | "fadeRight" | "scale";
 interface SectionProps {
   id: string;
   children: ReactNode;
   className?: string;
-  variant?: ThemeVariant;
+  variant?: AnimationVariant;
+  reveal?: boolean;
   "aria-label"?: string;
 }
 
-const themeVariants: Record<ThemeVariant, string> = {
-  primary: "bg-transparent dark:bg-bg-dark",
-  secondary: "bg-transparent dark:bg-zinc-900/95",
+const variants = {
+  fadeUp: { opacity: 0, y: 60 },
+  fadeLeft: { opacity: 0, x: -60 },
+  fadeRight: { opacity: 0, x: 60 },
+  scale: { opacity: 0, scale: 0.95 },
 };
 
 export function Section({
   id,
   children,
   className,
-  variant = "primary",
+  variant = "fadeUp",
+  reveal = true,
   "aria-label": ariaLabel,
 }: SectionProps) {
+  if (!reveal) {
+    return (
+      <section id={id} className={className}>
+        {children}
+      </section>
+    );
+  }
+
   return (
-    <section
+    <motion.section
       id={id}
       aria-label={ariaLabel}
-      className={clsx(
-        "py-20 transition-colors-custom",
-        themeVariants[variant],
-        className,
-      )}
+      initial={variants[variant]}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className={clsx(className)}
     >
       {children}
-    </section>
+    </motion.section>
   );
 }

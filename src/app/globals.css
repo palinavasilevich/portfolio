@@ -1,8 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap");
+
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* TYPOGRAPHY */
+  --font-family-primary: "Josefin Sans", sans-serif;
+  --font-family-secondary: "Alegreya Sans", sans-serif;
+  --font-family-cursive: "Cedarville Cursive", sans-serif;
+
+  --font-family-display: "George Round", sans-serif;
 }
 
 @theme inline {
@@ -26,7 +37,8 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: var(--font-family-primary);
 }
 
 @keyframes updown {
@@ -55,4 +67,8 @@ body {
 
 .animate-twinkle {
   animation: twinkle 3s infinite;
+}
+
+.group:hover .pause-on-hover {
+  animation-play-state: paused;
 }
