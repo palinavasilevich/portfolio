@@ -1,23 +1,30 @@
+"use client";
+
 import { Section } from "@/components/layout/section";
 import { SectionContainer } from "@/components/layout/sectionContainer";
 import { HeroIntro } from "./heroIntro";
 import { HeroImage } from "./heroImage/HeroImage";
 
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
+
 export function Hero() {
   return (
     <Section
       id="home"
-      reveal={false}
+      animateOnMount
       className="min-h-screen flex items-center"
     >
       <SectionContainer>
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <motion.div
+          variants={fadeIn({ direction: "down", delay: 0.2 })}
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24"
+        >
           <HeroImage />
-
-          <div className="flex-1 flex flex-col gap-6 text-center md:text-left items-center md:items-start">
+          <motion.div variants={fadeIn({ direction: "left", delay: 0.4 })}>
             <HeroIntro />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </SectionContainer>
     </Section>
   );
