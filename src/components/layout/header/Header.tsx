@@ -1,9 +1,18 @@
+"use client";
+
 import Link from "next/link";
+
 import { Code } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const ToggleThemeButton = dynamic(
+  () => import("@/components/toggleThemeButton"),
+  { ssr: false },
+);
 
 export function Header() {
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-md  dark:shadow-sm dark:shadow-slate-800 top-0 z-40">
+    <header className="shadow-md dark:shadow-sm dark:bg-gray-900 dark:shadow-slate-800 top-0 z-40">
       <nav>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 relative">
@@ -27,6 +36,10 @@ export function Header() {
                 </span>
               </span>
             </Link>
+
+            <div>
+              <ToggleThemeButton />
+            </div>
           </div>
         </div>
       </nav>

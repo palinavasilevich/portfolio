@@ -4,29 +4,33 @@
 
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  /* TYPOGRAPHY */
-  --font-family-primary: "Josefin Sans", sans-serif;
-  --font-family-secondary: "Alegreya Sans", sans-serif;
-  --font-family-cursive: "Cedarville Cursive", sans-serif;
-
-  --font-family-display: "George Round", sans-serif;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Colors */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+
+  /* Typography */
+  --font-family-primary: "Josefin Sans", sans-serif;
+  --font-family-secondary: "Alegreya Sans", sans-serif;
+  --font-family-cursive: "Cedarville Cursive", cursive;
+  --font-family-display: "George Round", sans-serif;
+}
+
+.dark {
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.985 0 0);
+}
+
+@layer base {
+  body {
+    @apply bg-background;
   }
 }
 
@@ -35,12 +39,12 @@ html {
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-
   font-family: var(--font-family-primary);
 }
 
+/* === Animations === */
 @keyframes updown {
   0%,
   100% {
@@ -69,6 +73,7 @@ body {
   animation: twinkle 3s infinite;
 }
 
+/* Pause animation on hover for grouped elements */
 .group:hover .pause-on-hover {
   animation-play-state: paused;
 }
