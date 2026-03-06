@@ -29,7 +29,7 @@ export function Section({
       animate={animateOnMount ? "visible" : undefined}
       whileInView={!animateOnMount ? "visible" : undefined}
       viewport={{ once: true, amount: 0.2 }}
-      className={cn("py-24", className)}
+      className={cn("py-16 scroll-mt-16", className)}
     >
       {children}
     </motion.section>
