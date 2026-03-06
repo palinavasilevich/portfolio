@@ -2,10 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FormInput } from "../formInput/FormInput";
 import { SubmitButton } from "../submitButton";
-import {
-  ContactFormValues,
-  contactSchema,
-} from "@/components/validate/contactSchema";
+import { ContactFormValues, contactSchema } from "@/validate/contactSchema";
 
 export function ContactForm() {
   const {

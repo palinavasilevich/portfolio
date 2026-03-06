@@ -1,4 +1,4 @@
-import { ContactFormValues } from "@/components/validate/contactSchema";
+import { ContactFormValues } from "@/validate/contactSchema";
 import cn from "@/utils/class-merge";
 import { UseFormRegister } from "react-hook-form";
 

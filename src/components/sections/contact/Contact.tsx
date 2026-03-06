@@ -1,9 +1,9 @@
 "use client";
 
-import { Section } from "@/components/layout/section";
-import { SectionContainer } from "@/components/layout/sectionContainer";
-import { SectionTitle } from "@/components/layout/sectionTitle/SectionTitle";
-import { ContactForm } from "./contactForm";
+import { Section } from "@/components/ui/section";
+import { SectionContainer } from "@/components/ui/sectionContainer";
+import { SectionTitle } from "@/components/ui/sectionTitle/SectionTitle";
+import { ContactForm } from "../../form/contactForm";
 
 export function Contact() {
   return (

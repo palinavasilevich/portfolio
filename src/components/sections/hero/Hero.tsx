@@ -1,12 +1,12 @@
 "use client";
 
-import { Section } from "@/components/layout/section";
-import { SectionContainer } from "@/components/layout/sectionContainer";
+import { Section } from "@/components/ui/section";
+import { SectionContainer } from "@/components/ui/sectionContainer";
 import { HeroIntro } from "./heroIntro";
 import { HeroImage } from "./heroImage/HeroImage";
 
 import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/motion";
+import { fadeIn } from "@/utils/scrollToSection";
 
 export function Hero() {
   return (

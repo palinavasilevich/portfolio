@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import cn from "@/utils/class-merge";
-import { containerVariants } from "@/utils/motion";
+import { containerVariants } from "@/utils/scrollToSection";
 
 interface SectionProps {
   id: string;

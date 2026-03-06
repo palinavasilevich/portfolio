@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 
-import { Section } from "@/components/layout/section";
-import { SectionContainer } from "@/components/layout/sectionContainer";
-import { SectionTitle } from "@/components/layout/sectionTitle/SectionTitle";
+import { Section } from "@/components/ui/section";
+import { SectionContainer } from "@/components/ui/sectionContainer";
+import { SectionTitle } from "@/components/ui/sectionTitle/SectionTitle";
 import { skills } from "@/data/skills";
 import { SkillCard } from "./SkillCard/SkillCard";
-import { fadeIn } from "@/utils/motion";
+import { fadeIn } from "@/utils/scrollToSection";
 
 export function Skills() {
   return (

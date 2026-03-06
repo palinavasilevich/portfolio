@@ -1,4 +1,4 @@
-import Background from "@/components/layout/background/Background";
+import Background from "@/components/ui/background/Background";
 import { Contact, Hero, Projects, Skills } from "@/components/sections";
 
 export default function Home() {

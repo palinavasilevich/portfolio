@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { NAVIGATION_ITEMS } from "@/constants";
 
 const ToggleThemeButton = dynamic(
-  () => import("@/components/toggleThemeButton"),
+  () => import("@/components/ui/toggleThemeButton"),
   { ssr: false },
 );
 
