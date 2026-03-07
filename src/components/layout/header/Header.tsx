@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { Code } from "lucide-react";
 import dynamic from "next/dynamic";
-import { NAVIGATION_ITEMS } from "@/constants";
+import { navigationLinks } from "@/data/navigationLink";
 
 const ToggleThemeButton = dynamic(
   () => import("@/components/ui/toggleThemeButton"),
@@ -38,7 +38,7 @@ export function Header() {
           </Link>
 
           <div className="flex justify-between items-center gap-2">
-            {NAVIGATION_ITEMS.map(({ href, label }) => (
+            {navigationLinks.map(({ href, label }) => (
               <Link
                 key={label}
                 href={href}

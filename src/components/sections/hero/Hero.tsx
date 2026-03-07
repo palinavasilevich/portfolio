@@ -6,7 +6,9 @@ import { HeroIntro } from "./heroIntro";
 import { HeroImage } from "./heroImage/HeroImage";
 
 import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/scrollToSection";
+
+import { SocialLinks } from "@/components/ui/socialLinks";
+import { fadeIn } from "@/utils/motionVariants";
 
 export function Hero() {
   return (
@@ -21,8 +23,12 @@ export function Hero() {
           className="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24"
         >
           <HeroImage />
-          <motion.div variants={fadeIn({ direction: "left", delay: 0.4 })}>
+          <motion.div
+            variants={fadeIn({ direction: "left", delay: 0.4 })}
+            className="flex-1 flex flex-col gap-6 text-center md:text-left items-center md:items-start"
+          >
             <HeroIntro />
+            <SocialLinks />
           </motion.div>
         </motion.div>
       </SectionContainer>

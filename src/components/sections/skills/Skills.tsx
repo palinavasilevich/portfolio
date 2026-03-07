@@ -7,7 +7,7 @@ import { SectionContainer } from "@/components/ui/sectionContainer";
 import { SectionTitle } from "@/components/ui/sectionTitle/SectionTitle";
 import { skills } from "@/data/skills";
 import { SkillCard } from "./SkillCard/SkillCard";
-import { fadeIn } from "@/utils/scrollToSection";
+import { fadeIn } from "@/utils/motionVariants";
 
 export function Skills() {
   return (
@@ -18,7 +18,7 @@ export function Skills() {
           variants={fadeIn({ direction: "down" })}
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6"
         >
-          {skills.map(({ name, icon }) => (
+          {skills.map(({ name, icon }, index) => (
             <SkillCard key={name} name={name} icon={icon} />
           ))}
         </motion.div>

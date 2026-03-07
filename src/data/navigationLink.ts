@@ -1,9 +1,9 @@
-export interface NavItem {
+export interface NavigationLink {
   href: string;
   label: string;
 }
 
-export const NAVIGATION_ITEMS: NavItem[] = [
+export const navigationLinks: NavigationLink[] = [
   { href: "#home", label: "Home" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },

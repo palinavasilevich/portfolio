@@ -7,7 +7,7 @@ import { SectionContainer } from "@/components/ui/sectionContainer";
 import { SectionTitle } from "@/components/ui/sectionTitle/SectionTitle";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "./ProjectCard/ProjectCard";
-import { fadeIn } from "@/utils/scrollToSection";
+import { fadeIn } from "@/utils/motionVariants";
 
 export function Projects() {
   return (

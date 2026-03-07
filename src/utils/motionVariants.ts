@@ -40,6 +40,37 @@ export const fadeIn = ({
     },
   };
 };
+export const slideIn = ({
+  direction,
+  delay = 0,
+  duration = 0.6,
+  transition,
+}: FadeInOptions = {}): Variants => {
+  const distance = 100;
+
+  const axis = direction === "left" || direction === "right" ? "x" : "y";
+
+  const offset =
+    direction === "left" || direction === "up"
+      ? `-${distance}%`
+      : `${distance}%`;
+
+  return {
+    hidden: {
+      ...(direction && { [axis]: offset }),
+    },
+    show: {
+      x: 0,
+      y: 0,
+      transition: {
+        duration,
+        delay,
+        ease: "easeOut",
+        ...transition,
+      },
+    },
+  };
+};
 
 interface ContainerOptions {
   staggerChildren?: number;

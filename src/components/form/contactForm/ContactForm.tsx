@@ -3,13 +3,14 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { FormInput } from "../formInput/FormInput";
 import { SubmitButton } from "../submitButton";
 import { ContactFormValues, contactSchema } from "@/validate/contactSchema";
+import { Card } from "@/components/ui/card";
 
 export function ContactForm() {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -19,12 +20,14 @@ export function ContactForm() {
     },
   });
 
-  const onSubmit: SubmitHandler<ContactFormValues> = (data) =>
+  const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
     console.log(JSON.stringify(data));
+    reset();
+  };
 
   return (
-    <div className="bg-white dark:bg-zinc-800/50 rounded-2xl p-8 shadow-sm border border-gray-200 dark:border-zinc-700">
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-7">
+    <Card>
+      <form noValidate onSubmit={handleSubmit(onSubmit)} className="space-y-7">
         <FormInput
           id="name"
           label="Name"
@@ -52,8 +55,8 @@ export function ContactForm() {
           className={errors.message ? "border-red-500" : ""}
           errorMessage={errors?.message?.message}
         />
-        <SubmitButton isLoading={false} />
+        <SubmitButton isLoading={isSubmitting} />
       </form>
-    </div>
+    </Card>
   );
 }
