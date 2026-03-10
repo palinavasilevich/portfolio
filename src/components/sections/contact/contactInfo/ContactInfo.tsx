@@ -61,16 +61,16 @@ export function ContactInfo() {
         </a>
       </div>
 
-      <div className="flex flex-col items-start gap-4 p-4 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition">
+      <div className="flex flex-col items-start gap-4 p-4 rounded-xl border border-zinc-200 dark:border-zinc-700 ">
         <div className="flex items-center gap-2">
           <MapPin />
           <span>Based in Bochum, Germany</span>
         </div>
 
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <span className="text-green-500">●</span>
           <span>Open to opportunities</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );

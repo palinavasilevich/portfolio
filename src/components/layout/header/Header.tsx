@@ -13,7 +13,7 @@ const ToggleThemeButton = dynamic(
 
 export function Header() {
   return (
-    <header className="shadow-md dark:shadow-sm dark:bg-gray-900 dark:shadow-slate-800 top-0 z-40">
+    <header className="fixed top-0 z-40 w-full bg-background shadow-md dark:shadow-sm dark:bg-gray-900 dark:shadow-slate-800">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 relative">
           <Link

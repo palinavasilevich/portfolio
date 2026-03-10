@@ -4,6 +4,7 @@ import { FormInput } from "../formInput/FormInput";
 import { SubmitButton } from "../submitButton";
 import { ContactFormValues, contactSchema } from "@/validate/contactSchema";
 import { Card } from "@/components/ui/card";
+import { useSendEmail } from "@/hooks/useSendEmail";
 
 export function ContactForm() {
   const {
@@ -20,9 +21,18 @@ export function ContactForm() {
     },
   });
 
-  const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
-    console.log(JSON.stringify(data));
-    reset();
+  const { sendEmail } = useSendEmail();
+
+  const onSubmit: SubmitHandler<ContactFormValues> = async (data) => {
+    try {
+      const { success, message } = await sendEmail(data);
+
+      if (success) {
+        reset();
+      }
+
+      console.log(message);
+    } catch (error) {}
   };
 
   return (

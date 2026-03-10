@@ -1,4 +1,4 @@
-export const errorMessages = {
+export const ERROR_MESSAGES = {
   validationError: {
     title: "Error Submitting Form",
     message: "Please fill out all required fields correctly.",
