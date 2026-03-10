@@ -6,6 +6,8 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Footer } from "@/components/layout/footer";
 
+import { LoaderProvider } from "@/components/providers/LoaderProvider";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -42,9 +44,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <LoaderProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </LoaderProvider>
         </ThemeProvider>
       </body>
     </html>
