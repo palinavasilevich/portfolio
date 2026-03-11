@@ -19,7 +19,7 @@ export function ToggleThemeButton() {
       className="transition duration-200 hover:scale-110 cursor-pointer"
     >
       <Image
-        src={isLight ? "/icons/moon.svg" : "/icons/sun_2.svg"}
+        src={isLight ? "/icons/moon.svg" : "/icons/sun.svg"}
         alt={isLight ? "Toggle Dark Mode" : "Toggle Light Mode"}
         width={30}
         height={30}

@@ -4,7 +4,6 @@ import { Project } from "@/data/projects";
 import Image from "next/image";
 
 import { FaExternalLinkAlt, FaGithub, FaGlobe } from "react-icons/fa";
-import { ImageIcon } from "lucide-react";
 
 import {
   SiExpo,
@@ -21,7 +20,6 @@ import {
   SiVite,
   SiZod,
 } from "react-icons/si";
-import Link from "next/link";
 
 interface ProjectCardProps {
   project: Project;
@@ -54,7 +52,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       className="group relative rounded-xl transition-colors-custom bg-white dark:bg-zinc-800/50 shadow-sm hover:shadow-md border border-gray-200 dark:border-zinc-700 flex flex-col"
     >
       <div className="aspect-video relative mt-6">
-        <Link
+        <a
           href={deployLink}
           target="_BLANK"
           rel="noopener noreferrer"
@@ -66,7 +64,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             fill
             className="transition-transform duration-500 group-hover:scale-105 object-contain"
           />
-        </Link>
+        </a>
       </div>
 
       <div className="flex flex-col grow p-8">
@@ -95,7 +93,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           <div className="flex gap-4">
-            <Link
+            <a
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -105,9 +103,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
             >
               <FaGithub className="w-5 h-5" />
               <span>GitHub</span>
-            </Link>
+            </a>
 
-            <Link
+            <a
               href={deployLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -117,7 +115,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             >
               <FaExternalLinkAlt className="w-4 h-4" />
               <span>Live Demo</span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

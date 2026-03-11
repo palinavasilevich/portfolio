@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { Footer } from "@/components/layout/footer";
 
 import { LoaderProvider } from "@/components/providers/LoaderProvider";
+import { ScrollToTopButton } from "@/components/ui/scrollToTopButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <ScrollToTopButton />
           </LoaderProvider>
         </ThemeProvider>
       </body>

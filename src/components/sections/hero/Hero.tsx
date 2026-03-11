@@ -9,13 +9,14 @@ import { motion } from "framer-motion";
 
 import { SocialLinks } from "@/components/ui/socialLinks";
 import { fadeIn } from "@/utils/motionVariants";
+import { ScrollDownButton } from "@/components/ui/scrollDownButton";
 
 export function Hero() {
   return (
     <Section
       id="home"
       animateOnMount
-      className="min-h-screen flex items-center"
+      className="min-h-screen flex items-center relative"
     >
       <SectionContainer>
         <motion.div
@@ -32,6 +33,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </SectionContainer>
+      <ScrollDownButton />
     </Section>
   );
 }
