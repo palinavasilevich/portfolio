@@ -43,7 +43,7 @@ export function FormInput({
             baseClasses,
             className,
             "resize-none",
-            errorMessage && "border-red-500",
+            errorMessage && "border-red-500 dark:border-red-500",
           )}
           {...register(id)}
           {...props}
@@ -55,7 +55,7 @@ export function FormInput({
           className={cn(
             baseClasses,
             className,
-            errorMessage && "border-red-500",
+            errorMessage && "border-red-500 dark:border-red-500",
           )}
           {...register(id)}
           {...props}

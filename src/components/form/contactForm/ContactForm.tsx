@@ -1,10 +1,10 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { FormInput } from "../formInput/FormInput";
+import { FormInput } from "../formInput";
 import { SubmitButton } from "../submitButton";
 import { ContactFormValues, contactSchema } from "@/validate/contactSchema";
 import { Card } from "@/components/ui/card";
-import { useSendEmail } from "@/hooks/useSendEmail";
+import { sendEmail } from "@/lib/api/sendEmail";
 
 export function ContactForm() {
   const {
@@ -21,18 +21,14 @@ export function ContactForm() {
     },
   });
 
-  const { sendEmail } = useSendEmail();
-
   const onSubmit: SubmitHandler<ContactFormValues> = async (data) => {
-    try {
-      const { success, message } = await sendEmail(data);
+    const result = await sendEmail(data);
 
-      if (success) {
-        reset();
-      }
+    if (result.success) {
+      reset();
+    }
 
-      console.log(message);
-    } catch (error) {}
+    alert(result.message);
   };
 
   return (

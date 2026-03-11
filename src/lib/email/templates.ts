@@ -1,8 +1,12 @@
-export const personalInboxTemplate = (
-  name: string,
-  email: string,
-  message: string,
-): string => `
+export const personalInboxTemplate = ({
+  name,
+  email,
+  message,
+}: {
+  name: string;
+  email: string;
+  message: string;
+}): string => `
   <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; font-size: 16px; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
     <h2 style="color: #007BFF;">📨 New message from your Portfolio</h2>
     <p><strong>Name:</strong> ${name}</p>
