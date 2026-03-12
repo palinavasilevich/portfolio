@@ -16,15 +16,16 @@ export function ScrollDownButton() {
         repeatType: "reverse",
         repeatDelay: 0.6,
       }}
-      className="absolute bottom-16 left-1/2 hidden -translate-x-1/2 flex-col items-center text-muted-foreground transition-colors hover:text-foreground md:flex"
+      className="absolute bottom-16 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center text-muted-foreground transition-colors hover:text-foreground md:flex lg:bottom-12"
     >
       <span className="text-sm">Scroll Down</span>
 
       <Image
         src="/icons/rocket.svg"
         alt="Rocket icon indicating scroll down"
-        width={80}
-        height={80}
+        width={56}
+        height={56}
+        className="md:w-20 md:h-20"
         priority
       />
     </motion.a>

@@ -21,7 +21,7 @@ export function Hero() {
       <SectionContainer>
         <motion.div
           variants={fadeIn({ direction: "down", delay: 0.2 })}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-16 lg:gap-24"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-14 lg:gap-24"
         >
           <HeroImage />
           <motion.div

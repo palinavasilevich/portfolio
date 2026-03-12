@@ -16,10 +16,10 @@ export function Projects() {
         <SectionTitle title="Projects" />
         <motion.div
           variants={fadeIn({ direction: "down" })}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {projects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </motion.div>
       </SectionContainer>

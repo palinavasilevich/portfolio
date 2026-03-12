@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import { Project } from "@/data/projects";
 import Image from "next/image";
 
@@ -20,12 +20,14 @@ import {
   SiVite,
   SiZod,
 } from "react-icons/si";
+import { fadeIn } from "@/utils/motionVariants";
 
 interface ProjectCardProps {
   project: Project;
+  index: number;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, index }: ProjectCardProps) {
   const { imageUrl, title, description, technologies, githubLink, deployLink } =
     project;
 
@@ -47,22 +49,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
   };
 
   return (
-    <div
-      data-testid="project-card"
-      className="group relative rounded-xl transition-colors-custom bg-white dark:bg-zinc-800/50 shadow-sm hover:shadow-md border border-gray-200 dark:border-zinc-700 flex flex-col"
+    <motion.div
+      variants={fadeIn({
+        direction: "down",
+        duration: 0.5,
+        delay: index * 0.1,
+      })}
+      className="group relative rounded-xl overflow-hidden transition-colors-custom bg-white dark:bg-zinc-800/50 shadow-sm hover:shadow-md border border-gray-200 dark:border-zinc-700 flex flex-col"
+      // initial={{ opacity: 0, y: 20 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // viewport={{ once: true }}
+      // transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className="aspect-video relative mt-6">
-        <a
-          href={deployLink}
-          target="_BLANK"
-          rel="noopener noreferrer"
-          className="group"
-        >
+      <div className="relative overflow-hidden h-48">
+        <a href={deployLink} target="_blank" rel="noopener noreferrer">
           <Image
             src={imageUrl}
             alt={title}
             fill
-            className="transition-transform duration-500 group-hover:scale-105 object-contain"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </a>
       </div>
@@ -119,6 +124,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

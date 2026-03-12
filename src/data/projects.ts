@@ -30,4 +30,19 @@ export const projects: Project[] = [
     deployLink: "https://german-irregular-verbs-app.onrender.com",
     imageUrl: "/images/projects/mighty-verbs.png",
   },
+
+  {
+    id: 2,
+    title: "The Light Of Memory",
+    description:
+      "The Light Of Memory is an interactive text-and-graphics game where the player goes through story scenes, solves puzzles, and makes decisions that affect the story outcome.",
+    technologies: [
+      { icon: "SiReact", name: "React" },
+      { icon: "SiTypescript", name: "TypeScript" },
+      { icon: "SiTailwindcss", name: "Tailwind CSS" },
+    ],
+    githubLink: "https://github.com/palinavasilevich/the-light-of-memory-game",
+    deployLink: "https://the-light-of-memory-game.onrender.com/",
+    imageUrl: "/images/projects/the-light-of-memory.png",
+  },
 ];
