@@ -17,14 +17,16 @@ export function ContactInfo() {
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-3 mt-4">
         <a
-          href="mailto:your@email.com"
+          href="mailto:palina.vasilevich@gmail.com"
           className="flex items-start gap-4 p-4 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition"
         >
           <FaEnvelope className="mt-1 text-lg" />
 
           <div>
             <div className="font-medium">Email</div>
-            <div className="text-sm text-secondary">your@email.com</div>
+            <div className="text-sm text-secondary">
+              palina.vasilevich@gmail.com
+            </div>
           </div>
         </a>
 
