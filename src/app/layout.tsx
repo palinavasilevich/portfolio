@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/footer";
 
 import { LoaderProvider } from "@/components/providers/LoaderProvider";
 import { ScrollToTopButton } from "@/components/ui/scrollToTopButton";
+import { ThemedToastContainer } from "@/components/ui/themedToastContainer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +52,8 @@ export default function RootLayout({
             <Footer />
             <ScrollToTopButton />
           </LoaderProvider>
+
+          <ThemedToastContainer />
         </ThemeProvider>
       </body>
     </html>

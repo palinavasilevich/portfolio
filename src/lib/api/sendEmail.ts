@@ -1,5 +1,3 @@
-import { MESSAGES } from "@/constants/messages";
-
 export interface EmailData {
   name: string;
   email: string;
@@ -18,19 +16,16 @@ export async function sendEmail(formData: EmailData): Promise<SendEmailResult> {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
-
     const data = await res.json();
-
     return {
       success: res.ok,
-      message: data?.message || data?.error || MESSAGES.contactForm.error,
+      message: data?.message || data?.error || "Something went wrong",
     };
   } catch (error) {
     console.error("Send email error:", error);
-
     return {
       success: false,
-      message: MESSAGES.contactForm.error,
+      message: "Failed to send message. Please try again later.",
     };
   }
 }

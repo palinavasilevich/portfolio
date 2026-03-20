@@ -5,6 +5,7 @@ import { SubmitButton } from "../submitButton";
 import { ContactFormValues, contactSchema } from "@/validate/contactSchema";
 import { Card } from "@/components/ui/card";
 import { sendEmail } from "@/lib/api/sendEmail";
+import { toast } from "react-toastify";
 
 export function ContactForm() {
   const {
@@ -28,7 +29,7 @@ export function ContactForm() {
       reset();
     }
 
-    alert(result.message);
+    toast(result.message, { type: result.success ? "success" : "error" });
   };
 
   return (

@@ -23,7 +23,6 @@ export async function sendContactEmail({
     html: personalInboxTemplate({ name, email, message }),
     replyTo: email,
   });
-
   if (error) {
     throw new Error(error.message);
   }
