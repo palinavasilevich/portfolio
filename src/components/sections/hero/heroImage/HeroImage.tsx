@@ -6,7 +6,7 @@ export function HeroImage() {
     <div className="flex justify-center pt-10 pb-2 lg:pb-10">
       <Link href="#contact" className="group">
         <Image
-          className="max-w-full h-auto rounded-3xl cursor-pointer transition-transform duration-500 group-hover:scale-105 object-contain"
+          className="max-w-full h-auto rounded-3xl transition-transform duration-500 group-hover:scale-105 object-contain"
           src="/images/profile-image.jpg"
           alt="Profile picture of Palina Vasilevich"
           width={300}
