@@ -7,10 +7,10 @@ export function HeroImage() {
       <Link href="#contact" className="group">
         <Image
           className="max-w-full h-auto rounded-3xl cursor-pointer transition-transform duration-500 group-hover:scale-105 object-contain"
-          src="/images/profile-image.JPG"
+          src="/images/profile-image.jpg"
           alt="Profile picture of Palina Vasilevich"
-          width={360}
-          height={360}
+          width={300}
+          height={300}
           priority
         />
       </Link>
