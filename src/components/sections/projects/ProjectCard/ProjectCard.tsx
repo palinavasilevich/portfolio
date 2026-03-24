@@ -27,26 +27,26 @@ interface ProjectCardProps {
   index: number;
 }
 
+const icons: Record<string, React.ElementType> = {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiShadcnui,
+  SiReactquery,
+  SiNodedotjs,
+  SiStyledcomponents,
+  SiExpo,
+  SiVite,
+  SiRedux,
+  SiMui,
+  SiZod,
+  default: FaGlobe,
+};
+
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const { imageUrl, title, description, technologies, githubLink, deployLink } =
     project;
-
-  const icons: Record<string, React.ElementType> = {
-    SiReact,
-    SiNextdotjs,
-    SiTypescript,
-    SiTailwindcss,
-    SiShadcnui,
-    SiReactquery,
-    SiNodedotjs,
-    SiStyledcomponents,
-    SiExpo,
-    SiVite,
-    SiRedux,
-    SiMui,
-    SiZod,
-    default: FaGlobe,
-  };
 
   return (
     <motion.div
@@ -56,20 +56,25 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         delay: index * 0.1,
       })}
       className="group relative rounded-xl overflow-hidden transition-colors-custom bg-white dark:bg-zinc-800/50 shadow-sm hover:shadow-md border border-gray-200 dark:border-zinc-700 flex flex-col"
-      // initial={{ opacity: 0, y: 20 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ once: true }}
-      // transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className="relative overflow-hidden h-48">
-        <a href={deployLink} target="_blank" rel="noopener noreferrer">
+      <div className="relative overflow-hidden aspect-video">
+        {deployLink ? (
+          <a href={deployLink} target="_blank" rel="noopener noreferrer">
+            <Image
+              src={imageUrl}
+              alt={title}
+              fill
+              className="object-container transition-transform duration-500 group-hover:scale-105"
+            />
+          </a>
+        ) : (
           <Image
             src={imageUrl}
             alt={title}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
-        </a>
+        )}
       </div>
 
       <div className="flex flex-col grow p-8">

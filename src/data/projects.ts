@@ -9,13 +9,13 @@ export interface Project {
   description: string;
   technologies: Technology[];
   githubLink: string;
-  deployLink: string;
+  deployLink?: string;
   imageUrl: string;
 }
 
 export const projects: Project[] = [
   {
-    id: crypto.randomUUID(),
+    id: "mighty-verbs",
     title: "Mighty Verbs",
     description:
       "Mighty Verbs is a modern full-stack web application for learning German irregular verbs. The project focuses on clean architecture, scalable structure, and a distraction-free learning experience.",
@@ -32,7 +32,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: crypto.randomUUID(),
+    id: "the-light-of-memory",
     title: "The Light Of Memory",
     description:
       "The Light Of Memory is an interactive text-and-graphics game where the player goes through story scenes, solves puzzles, and makes decisions that affect the story outcome.",
@@ -47,7 +47,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: crypto.randomUUID(),
+    id: "miro-clone",
     title: "Miro Clone",
     description:
       "A Miro-inspired boards application for creating and managing interactive workspaces. Built with scalable Feature-Sliced Design architecture, it includes reusable UI components, flexible layouts, and state-driven interactions for working with boards and their content.",
