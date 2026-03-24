@@ -57,7 +57,7 @@ export const projects: Project[] = [
       { icon: "SiTailwindcss", name: "Tailwind CSS" },
     ],
     githubLink: "https://github.com/palinavasilevich/react-miro-app",
-    deployLink: "",
+    deployLink: "https://react-miro-app.onrender.com/login",
     imageUrl: "/images/projects/miro.png",
   },
 ];
