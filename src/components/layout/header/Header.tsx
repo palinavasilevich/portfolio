@@ -18,7 +18,7 @@ export function Header() {
         <div className="flex justify-between items-center h-16 relative">
           <LogoLink />
 
-          <div className="flex justify-between items-center gap-2">
+          <div className="flex justify-between items-center gap-3">
             {navigationLinks.map(({ href, label }) => (
               <Link
                 key={label}
