@@ -11,6 +11,5 @@ export function LoaderProvider({ children }: { children: React.ReactNode }) {
     return () => clearTimeout(timer);
   }, []);
 
-  // return <DiceLoader />;
   return <>{loading ? <DiceLoader /> : children}</>;
 }

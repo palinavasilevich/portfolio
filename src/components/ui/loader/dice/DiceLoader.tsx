@@ -16,16 +16,21 @@ function RotatingDice() {
     groupRef.current.rotation.z += delta * 0.3;
   });
 
-  return <D20Model ref={groupRef} scale={12.5} />;
+  return <D20Model ref={groupRef} />;
 }
 
 export function DiceLoader() {
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background">
       <div className="w-60 h-60">
-        <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
-          <ambientLight intensity={0.7} />
-          <directionalLight position={[3, 3, 3]} />
+        <Canvas camera={{ position: [0, 0, 5], fov: 35 }}>
+          <ambientLight intensity={0.6} />
+          <directionalLight position={[5, 5, 5]} intensity={1.2} />
+          <directionalLight
+            position={[-3, -3, -3]}
+            intensity={0.3}
+            color="#a855f7"
+          />
           <RotatingDice />
         </Canvas>
       </div>
