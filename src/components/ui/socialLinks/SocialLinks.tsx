@@ -1,11 +1,10 @@
 import { socialLinks } from "@/data/socialLinks";
-import Link from "next/link";
 
 export function SocialLinks() {
   return (
     <div className="flex justify-center flex-wrap gap-4">
       {socialLinks.map(({ href, icon: Icon, name }) => (
-        <Link
+        <a
           key={href}
           href={href}
           target="_blank"
@@ -15,7 +14,7 @@ export function SocialLinks() {
         >
           <Icon className="w-5 h-5 dark:text-zinc-300" />
           <span>{name}</span>
-        </Link>
+        </a>
       ))}
     </div>
   );

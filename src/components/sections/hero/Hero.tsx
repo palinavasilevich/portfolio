@@ -2,14 +2,15 @@
 
 import { Section } from "@/components/ui/section";
 import { SectionContainer } from "@/components/ui/sectionContainer";
-import { HeroIntro } from "./heroIntro";
-import { HeroImage } from "./heroImage/HeroImage";
 
 import { motion } from "framer-motion";
 
 import { SocialLinks } from "@/components/ui/socialLinks";
 import { fadeIn } from "@/utils/motionVariants";
 import { ScrollDownButton } from "@/components/ui/scrollDownButton";
+import { HeroImage } from "./heroImage";
+import { HeroIntro } from "./heroIntro";
+import { DownloadCVButton } from "./downloadCVButton";
 
 export function Hero() {
   return (
@@ -26,10 +27,11 @@ export function Hero() {
           <HeroImage />
           <motion.div
             variants={fadeIn({ direction: "left", delay: 0.4 })}
-            className="flex-1 flex flex-col gap-6 text-center md:text-left items-center md:items-start"
+            className="flex-1 flex flex-col gap-6 text-center md:text-left items-center"
           >
             <HeroIntro />
             <SocialLinks />
+            <DownloadCVButton />
           </motion.div>
         </motion.div>
       </SectionContainer>
