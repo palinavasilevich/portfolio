@@ -40,6 +40,7 @@ export const projects: Project[] = [
       { icon: "SiReact", name: "React" },
       { icon: "SiTypescript", name: "TypeScript" },
       { icon: "SiTailwindcss", name: "Tailwind CSS" },
+      { icon: "SiShadcnui", name: "ShadCN UI" },
     ],
     githubLink: "https://github.com/palinavasilevich/the-light-of-memory-game",
     deployLink: "https://the-light-of-memory-game.onrender.com/",
@@ -54,10 +55,28 @@ export const projects: Project[] = [
     technologies: [
       { icon: "SiReact", name: "React" },
       { icon: "SiTypescript", name: "TypeScript" },
+      { icon: "SiReactquery", name: "TanStack Query" },
       { icon: "SiTailwindcss", name: "Tailwind CSS" },
+      { icon: "SiShadcnui", name: "ShadCN UI" },
     ],
     githubLink: "https://github.com/palinavasilevich/react-miro-app",
     deployLink: "https://react-miro-app.onrender.com/login",
     imageUrl: "/images/projects/miro.png",
+  },
+
+  {
+    id: "what-to-read",
+    title: "What can I read today?",
+    description: `"What can I read today?" is a web application that helps users discover their next favorite book through personalized recommendations. By exploring books based on language, genre, author, and more, readers can easily find titles that match their interests. The app provides a clean, intuitive interface and a seamless way to explore new reads, making book discovery simple and enjoyable.`,
+    technologies: [
+      { icon: "SiNextdotjs", name: "Next.js" },
+      { icon: "SiTypescript", name: "TypeScript" },
+      { icon: "SiReactquery", name: "TanStack Query" },
+      { icon: "SiTailwindcss", name: "Tailwind CSS" },
+      { icon: "SiShadcnui", name: "ShadCN UI" },
+    ],
+    githubLink: "https://github.com/palinavasilevich/book-app",
+    deployLink: "https://book-app-mu-smoky.vercel.app",
+    imageUrl: "/images/projects/what-to-read.png",
   },
 ];
