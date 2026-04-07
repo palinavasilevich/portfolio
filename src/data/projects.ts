@@ -79,4 +79,19 @@ export const projects: Project[] = [
     deployLink: "https://book-app-mu-smoky.vercel.app",
     imageUrl: "/images/projects/what-to-read.png",
   },
+
+  {
+    id: "mighty-articles",
+    title: "Mighty Articles",
+    description:
+      "Mighty Articles is an interactive web app designed for learning and practicing German noun articles.",
+    technologies: [
+      { icon: "SiReact", name: "React" },
+      { icon: "SiTypescript", name: "TypeScript" },
+      { icon: "SiTailwindcss", name: "Tailwind CSS" },
+    ],
+    githubLink: "https://github.com/palinavasilevich/mighty-articles",
+    deployLink: "https://mighty-articles.onrender.com/",
+    imageUrl: "/images/projects/mighty-articles.png",
+  },
 ];
