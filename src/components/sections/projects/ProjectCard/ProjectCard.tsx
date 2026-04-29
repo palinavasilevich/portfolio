@@ -19,6 +19,9 @@ import {
   SiTypescript,
   SiVite,
   SiZod,
+  SiReacthookform,
+  SiOpenai,
+  SiPrisma,
 } from "react-icons/si";
 import { fadeIn } from "@/utils/motionVariants";
 
@@ -41,6 +44,9 @@ const icons: Record<string, React.ElementType> = {
   SiRedux,
   SiMui,
   SiZod,
+  SiReacthookform,
+  SiOpenai,
+  SiPrisma,
   default: FaGlobe,
 };
 

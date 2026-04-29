@@ -81,6 +81,23 @@ export const projects: Project[] = [
   },
 
   {
+    id: "youtube-clone",
+    title: "YouTube Clone",
+    description:
+      "YouTube Clone is a responsive video streaming web application inspired by YouTube. It enables users to watch videos and access real-time content fetched from an external API. The application features dynamic routing, reusable components, and a modern, responsive UI with a strong focus on performance and user experience.",
+    technologies: [
+      { icon: "SiNextdotjs", name: "Next.js" },
+      { icon: "SiTypescript", name: "TypeScript" },
+      { icon: "SiPrisma", name: "Prisma" },
+      { icon: "SiReacthookform", name: "React Hook Form" },
+      { icon: "SiZod", name: "Zod" },
+    ],
+    githubLink: "https://github.com/palinavasilevich/youtube-clone",
+    deployLink: "https://youtube-clone-jet-zeta.vercel.app",
+    imageUrl: "/images/projects/youtube-clone.png",
+  },
+
+  {
     id: "mighty-articles",
     title: "Mighty Articles",
     description:
