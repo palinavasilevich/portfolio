@@ -22,6 +22,10 @@ import {
   SiReacthookform,
   SiOpenai,
   SiPrisma,
+  SiDocker,
+  SiFastify,
+  SiTypeorm,
+  SiPostgresql,
 } from "react-icons/si";
 import { fadeIn } from "@/utils/motionVariants";
 
@@ -47,6 +51,10 @@ const icons: Record<string, React.ElementType> = {
   SiReacthookform,
   SiOpenai,
   SiPrisma,
+  SiFastify,
+  SiTypeorm,
+  SiDocker,
+  SiPostgresql,
   default: FaGlobe,
 };
 

@@ -48,6 +48,45 @@ export const projects: Project[] = [
   },
 
   {
+    id: "youtube-clone",
+    title: "YouTube Clone",
+    description:
+      "YouTube Clone is a responsive video streaming web application inspired by YouTube. It enables users to watch videos and access real-time content fetched from an external API. The application features dynamic routing, reusable components, and a modern, responsive UI with a strong focus on performance and user experience.",
+    technologies: [
+      { icon: "SiNextdotjs", name: "Next.js" },
+      { icon: "SiTypescript", name: "TypeScript" },
+      { icon: "SiPrisma", name: "Prisma" },
+      { icon: "SiReacthookform", name: "React Hook Form" },
+      { icon: "SiZod", name: "Zod" },
+    ],
+    githubLink: "https://github.com/palinavasilevich/youtube-clone",
+    deployLink: "https://youtube-clone-jet-zeta.vercel.app",
+    imageUrl: "/images/projects/youtube-clone.png",
+  },
+
+  {
+    id: "events",
+    title: "Event App",
+    description:
+      "A full-stack event management platform where users can create, discover, and join events. The app supports user authentication, full CRUD for events, participant management with capacity enforcement, and a responsive UI that works across mobile and desktop.",
+    technologies: [
+      { icon: "SiReact", name: "React" },
+      { icon: "SiTypescript", name: "TypeScript" },
+      { icon: "SiFastify", name: "Fastify" },
+      { icon: "SiTypeorm", name: "Typeorm" },
+      { icon: "SiPostgresql", name: "Postgresql" },
+      { icon: "SiReacthookform", name: "React Hook Form" },
+      { icon: "SiZod", name: "Zod" },
+      { icon: "SiDocker", name: "Docker" },
+      { icon: "SiShadcnui", name: "ShadCN UI" },
+      { icon: "SiTailwindcss", name: "Tailwind CSS" },
+    ],
+    githubLink: "https://github.com/palinavasilevich/event-app",
+    deployLink: "https://event-web-rgg7.onrender.com/login",
+    imageUrl: "/images/projects/events.png",
+  },
+
+  {
     id: "miro-clone",
     title: "Miro Clone",
     description:
@@ -78,23 +117,6 @@ export const projects: Project[] = [
     githubLink: "https://github.com/palinavasilevich/book-app",
     deployLink: "https://book-app-mu-smoky.vercel.app",
     imageUrl: "/images/projects/what-to-read.png",
-  },
-
-  {
-    id: "youtube-clone",
-    title: "YouTube Clone",
-    description:
-      "YouTube Clone is a responsive video streaming web application inspired by YouTube. It enables users to watch videos and access real-time content fetched from an external API. The application features dynamic routing, reusable components, and a modern, responsive UI with a strong focus on performance and user experience.",
-    technologies: [
-      { icon: "SiNextdotjs", name: "Next.js" },
-      { icon: "SiTypescript", name: "TypeScript" },
-      { icon: "SiPrisma", name: "Prisma" },
-      { icon: "SiReacthookform", name: "React Hook Form" },
-      { icon: "SiZod", name: "Zod" },
-    ],
-    githubLink: "https://github.com/palinavasilevich/youtube-clone",
-    deployLink: "https://youtube-clone-jet-zeta.vercel.app",
-    imageUrl: "/images/projects/youtube-clone.png",
   },
 
   {
