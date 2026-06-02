@@ -48,6 +48,27 @@ export const projects: Project[] = [
   },
 
   {
+    id: "board-game-tracker",
+    title: "Board Game Tracker",
+    description:
+      "Board Game Tracker is a full-stack web application for board game enthusiasts to organize their personal game libraries and discover new titles loved by the BoardGameGeek community. It features user authentication, collection management, and game recommendations in a clean, responsive interface.",
+    technologies: [
+      { icon: "SiNextdotjs", name: "Next.js" },
+      { icon: "SiTypescript", name: "TypeScript" },
+      { icon: "SiPrisma", name: "Prisma" },
+      { icon: "SiPostgresql", name: "PostgreSQL" },
+      { icon: "SiReacthookform", name: "React Hook Form" },
+      { icon: "SiZod", name: "Zod" },
+      { icon: "SiDocker", name: "Docker" },
+      { icon: "SiShadcnui", name: "ShadCN UI" },
+      { icon: "SiTailwindcss", name: "Tailwind CSS" },
+    ],
+    githubLink: "https://github.com/palinavasilevich/board-game-tracker",
+    deployLink: "https://board-game-tracker-xugx.onrender.com/",
+    imageUrl: "/images/projects/board-game-tracker.png",
+  },
+
+  {
     id: "youtube-clone",
     title: "YouTube Clone",
     description:
