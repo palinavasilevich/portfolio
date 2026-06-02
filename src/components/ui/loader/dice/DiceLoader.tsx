@@ -21,8 +21,9 @@ function RotatingDice() {
 
 export function DiceLoader() {
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background">
-      <div className="w-60 h-60">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0d0d14] animate-in fade-in duration-300">
+      <div className="relative w-80 h-80">
+        <div className="absolute inset-x-0 bottom-4 mx-auto w-40 h-8 rounded-full bg-purple-600/30 blur-xl" />
         <Canvas camera={{ position: [0, 0, 5], fov: 35 }}>
           <ambientLight intensity={0.6} />
           <directionalLight position={[5, 5, 5]} intensity={1.2} />
@@ -35,7 +36,7 @@ export function DiceLoader() {
         </Canvas>
       </div>
 
-      <p className="mt-8 text-purple-400 tracking-[0.4em] animate-pulse text-lg">
+      <p className="mt-4 text-purple-400 tracking-[0.4em] animate-pulse text-lg">
         LOADING...
       </p>
     </div>
