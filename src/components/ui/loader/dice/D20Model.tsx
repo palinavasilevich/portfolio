@@ -19,8 +19,10 @@ const FACE_INDICES: [number, number, number][] = [
   [4, 9, 5], [2, 4, 11], [6, 2, 10], [8, 6, 7], [9, 8, 1],
 ];
 
-// Opposite faces sum to 21 (standard d20 convention)
-const FACE_NUMBERS = [1, 20, 2, 19, 3, 18, 4, 17, 5, 16, 6, 15, 7, 14, 8, 13, 9, 12, 10, 11];
+// Opposite faces sum to 21 (standard d20 convention).
+// Pairs derived from antipodal vertex mapping (0↔3,1↔2,4↔7,5↔6,8↔11,9↔10):
+// (0,13),(1,12),(2,11),(3,10),(4,14),(5,17),(6,18),(7,19),(8,15),(9,16)
+const FACE_NUMBERS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 17, 18, 19, 20, 16, 12, 11, 15, 14, 13];
 
 function createNumberTexture(num: number): THREE.CanvasTexture {
   const size = 256;
