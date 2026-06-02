@@ -7,7 +7,10 @@ interface ContactEmailProps {
   message: string;
 }
 
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL!;
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL;
+if (!CONTACT_EMAIL) {
+  throw new Error("Missing required environment variable: CONTACT_EMAIL");
+}
 const EMAIL_FROM =
   process.env.EMAIL_FROM || "Portfolio <onboarding@resend.dev>";
 

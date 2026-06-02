@@ -18,7 +18,7 @@ export default function Background({
         {stars.map((star) => (
           <div
             key={star.id}
-            className="absolute bg-white dark:bg-gray-300 rounded-full opacity-70 animate-twinkle"
+            className="absolute bg-slate-300 dark:bg-gray-300 rounded-full opacity-70 animate-twinkle"
             style={{
               width: `${star.size}px`,
               height: `${star.size}px`,

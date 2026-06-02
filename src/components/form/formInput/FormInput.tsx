@@ -34,7 +34,14 @@ export function FormInput({
 
   return (
     <div className="relative">
-      {label && <label htmlFor={id}>{label}</label>}
+      {label && (
+        <label
+          htmlFor={id}
+          className="block mb-1.5 text-sm font-medium text-primary-dark dark:text-zinc-200"
+        >
+          {label}
+        </label>
+      )}
       {rows ? (
         <textarea
           id={id}

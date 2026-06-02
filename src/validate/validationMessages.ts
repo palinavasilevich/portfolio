@@ -12,6 +12,6 @@ export const validationMessages = {
   message: {
     required: "Message cannot be empty.",
     tooShort: "Message must be at least 5 characters long.",
-    tooLong: "Message cannot be longer than 500 characters.",
+    tooLong: "Message cannot be longer than 100 characters.",
   },
 };

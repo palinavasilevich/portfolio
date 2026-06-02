@@ -78,7 +78,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               src={imageUrl}
               alt={title}
               fill
-              className="object-container transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </a>
         ) : (

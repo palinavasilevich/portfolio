@@ -16,7 +16,7 @@ export async function sendEmail(formData: EmailData): Promise<SendEmailResult> {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
-    const data = await res.json();
+    const data = await res.json().catch(() => ({}));
     return {
       success: res.ok,
       message: data?.message || data?.error || "Something went wrong",

@@ -51,9 +51,8 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <ScrollToTopButton />
+            <ThemedToastContainer />
           </LoaderProvider>
-
-          <ThemedToastContainer />
         </ThemeProvider>
       </body>
     </html>

@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUp } from "lucide-react";
 import cn from "@/utils/class-merge";
 
 export function ScrollToTopButton() {
@@ -47,7 +46,6 @@ export function ScrollToTopButton() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       aria-label="Scroll to top"
-      aria-hidden={!isVisible}
       className={cn(baseStyles, interactionStyles, transitionStyles)}
     >
       {/* <ArrowUp className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" /> */}

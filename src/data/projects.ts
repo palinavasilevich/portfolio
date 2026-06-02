@@ -128,7 +128,7 @@ export const projects: Project[] = [
       { icon: "SiReact", name: "React" },
       { icon: "SiTypescript", name: "TypeScript" },
       { icon: "SiTailwindcss", name: "Tailwind CSS" },
-      { icon: "SiOpenai", name: "Groq API" },
+      { icon: "SiGroq", name: "Groq API" },
     ],
     githubLink: "https://github.com/palinavasilevich/mighty-articles",
     deployLink: "https://mighty-articles.onrender.com/",
